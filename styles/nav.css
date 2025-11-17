@@ -2,22 +2,59 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  list-style: 0;
   padding-block: 20px;
   background-color: var(--surface-color);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
+/* Logo */
+#logo img {
+  height: 40px;
+}
+
+/* Menu */
 nav ul {
   list-style: none;
   display: flex;
   align-items: center;
-  padding-block: 8px;
   gap: 24px;
 }
 
-nav ul li:las-child img {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
+/* Ícones do menu */
+nav ul li img {
+  width: 24px;
+  transition: 0.2s;
+}
+
+nav ul li img:hover {
+  filter: brightness(0.6);
+}
+
+/* Último item: imagem de perfil */
+
+nav ul li:last-child img,
+#profile-image {
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--brand-color);
+}
+
+nav ul li:last-child img:hover {
+  border-color: #ff8c7e;
+  transform: scale(1.05);
+}
+
+/* Links */
+nav a {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: var(--brand-color);
+  text-decoration: none;
 }

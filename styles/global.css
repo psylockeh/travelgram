@@ -1,9 +1,11 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Variáveis */
 :root {
   --brand-color: #ef5f4c;
   --shape-transparency: rgba(255, 255, 255, 0.5);
@@ -23,6 +25,7 @@
 body {
   color: var(--text-color-secondary);
   background-color: var(--background-color);
+  font: var(--text);
 }
 
 a {

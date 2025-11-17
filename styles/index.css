@@ -1,2 +1,81 @@
 @import url(global.css);
 @import url(nav.css);
+@import url(main.css);
+@import url(footer.css);
+
+/* Header geral */
+header {
+  padding-block: 40px;
+}
+
+/* Perfil */
+#profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+#profile img {
+  width: 130px;
+  height: 130px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#profile h1 {
+  font: var(--text-lg);
+  color: var(--tex-color-primary);
+  margin-bottom: 12px;
+}
+
+#profile p {
+  max-width: 600px;
+  color: var(--text-color-secondary);
+  font: var(--text);
+  line-height: 1.6;
+}
+
+/* Infos */
+#info {
+  display: flex;
+  gap: 32px;
+  margin-top: 32px;
+  list-style: none;
+}
+
+#info li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#info img {
+  width: 20px;
+}
+
+#info span {
+  font-weight: 600;
+  color: var(--tex-color-primary);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  #profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #profile img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  #info {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
